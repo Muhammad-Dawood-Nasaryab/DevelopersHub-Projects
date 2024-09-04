@@ -1,8 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Poppins;
+}
+
+body {
+	background-color: #111111;
+}
+
+header nav {
+	display: flex;
+	justify-content: space-evenly;
 }
 
 header nav h1 {
+	color: #4343e4;
   font-size: 40px;
-	font-weight: bolder;
+	font-weight: 2000;
+	margin: 10px;
+	letter-spacing: 2px;
+}
+
+header nav ul {
+	width: 35%;
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	justify-content: space-between;
+}
+
+header nav ul li {
+	text-align: right;
+}
+
+header nav ul li:nth-child(1) a{
+	background-color: #4343e4;
+}
+
+header nav ul li a {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	margin-top: 20px;
+	padding: 8px 10px;
+	border-radius: 5px;
+	border-bottom:2px solid #3030ad;
+	overflow: hidden;
+}
+
+header nav ul li a:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background-color: #4343e4;
+	transition: 0.3s ease-in;
+	z-index: -1;
+}
+
+header nav ul li a:hover::before {
+	width: 100%;
+}
+
+.icons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	left: 30px;
+	top: 50%;
+	gap: 1rem;
+	transform: translateY(-50%);
+}
+
+.icons a {
+	display: inline;
+	font-size: 20px;
+	text-decoration: none;
+	color: white;
+	background-color: #4343e4;
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icons .line {
+	height: 40px;
+	width: 3.5px;
+	border-radius: 5rem;
+	background-color: white;
 }
