@@ -2,10 +2,16 @@
 
 * {
 	font-family: Poppins;
+	scroll-behavior: smooth;
+	padding: 0;
 }
 
 body {
 	background-color: #111111;
+}
+
+header {
+	margin-bottom: 55px;
 }
 
 header nav {
@@ -18,11 +24,11 @@ header nav h1 {
   font-size: 40px;
 	font-weight: 2000;
 	margin: 10px;
-	letter-spacing: 2px;
+	letter-spacing: 4px;
 }
 
 header nav ul {
-	width: 35%;
+	width: 40%;
 	display: flex;
 	margin: 0px;
 	padding: 0px;
@@ -58,7 +64,7 @@ header nav ul li a:before {
 	height: 100%;
 	width: 0;
 	background-color: #4343e4;
-	transition: 0.3s ease-in;
+	transition: 0.2s ease-in;
 	z-index: -1;
 }
 
@@ -89,6 +95,11 @@ header nav ul li a:hover::before {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: 0.1s ease;
+}
+
+.icons a:hover {
+	transform: scale(1.1);
 }
 
 .icons .line {
@@ -97,3 +108,61 @@ header nav ul li a:hover::before {
 	border-radius: 5rem;
 	background-color: white;
 }
+
+section .container {
+	color: white;
+	width: 70%;
+	margin: auto;
+	min-height: 80vh;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+section .container .intro .heading {
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+section .container .intro .intro-title {
+	font-size: 50px;
+	line-height: 50px;
+}
+
+section .container .profile-pic {
+	width: 320px;
+	height: 320px;
+	flex-shrink: 0;
+	margin-top: 50px;
+}
+
+section .container .profile-pic img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+section .container button {
+	font-size: large;
+	color: white;
+	font-weight: 600;
+	background-color: #4343e4;
+	letter-spacing: 2px;
+	width: 150px;
+	height: 50px;
+	margin-top: 20px;
+	border: 1px solid #111111;
+	border-radius: 10px;
+	box-shadow: 
+		2px 2px 2px black;
+	transition: 0.2s ease-in;
+	cursor: pointer;
+}
+
+section .container button:hover {
+	transform: scale(1.1);
+}
+
