@@ -7,7 +7,7 @@
 }
 
 body {
-	background-color: #111111;
+	background-color: #131313;
 }
 
 header {
@@ -119,50 +119,180 @@ section .container {
 }
 
 
-section .container .intro .heading {
+.intro .heading {
   letter-spacing: 2px;
   font-weight: 600;
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
-
-section .container .intro .intro-title {
+.intro .intro-title {
 	font-size: 50px;
 	line-height: 50px;
 }
 
-section .container .profile-pic {
+.profile-pic {
 	width: 320px;
 	height: 320px;
 	flex-shrink: 0;
 	margin-top: 50px;
 }
 
-section .container .profile-pic img {
+.profile-pic img {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
 	object-fit: cover;
 }
 
-section .container button {
-	font-size: large;
+.margin {
+	margin-top: 50px;
+}
+
+.sect-title {
+	padding: 20px;
+}
+
+.sect-title h3 {
+	display: flex;
+	justify-content: center;
+	color: #6565f7;
+	font-weight: 200;
+	font-size: 25px;
+	padding: 0;
+	margin: 0;
+}
+
+.sect-title h1 {
+	display: flex;
+	justify-content: center;
+	position: relative;
 	color: white;
-	font-weight: 600;
+	font-size: 45px;
+	letter-spacing: 4px;
+	padding: 0;
+	margin: 0;
+}
+
+.sect-title h1::before {
+	content: "";
+	position: absolute;
+	width: 300px;
+	height: 3px;
 	background-color: #4343e4;
-	letter-spacing: 2px;
-	width: 150px;
-	height: 50px;
-	margin-top: 20px;
-	border: 1px solid #111111;
+	border-radius: 5px;
+	bottom: 0;
+	right: 50%;
+	transform: translateX(50%);
+}
+
+.institute h2 {
+	display: flex;
+	justify-content: center;
+	color: white;
+	font-weight: 500;
+}
+
+.institute p {
+	display: flex;
+	justify-content: center;
+	color: white;
+	font-weight: 300;
+	margin: 0 0 0 20px;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+
+.skill {
+	width: 350px;
+	color: white;
+	text-align: center;
+}
+
+.skill h2 {
+	display: flex;
+	justify-content: center;
+	font-weight: 500;
+}
+
+.skill p {
+	font-weight: 300;
+}
+
+.projects {
+	display: flex;
+	justify-content: center;
+	color: white;
+	gap: 5rem;
+}
+
+.project-image {
+	width: 100%;
+	overflow: hidden;
+	object-fit: cover;
+	height: 160px;
+	border-radius: 10px 10px 0 0;
+}
+
+.project-image img:hover {
+	transform: scale(1.05);
+}
+
+.project-card {
+	background-color: #0a0a0a;
 	border-radius: 10px;
-	box-shadow: 
-		2px 2px 2px black;
-	transition: 0.2s ease-in;
-	cursor: pointer;
 }
 
-section .container button:hover {
+.project-info {
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 30px;
+	padding: 0;
+}
+
+.project-info a {
+	display: inline-block;
+	text-align: right;
+	color: white;
+	font-size: 20px;
+	top: 5px;
+	transition: 0.2s ease;
+}
+
+.project-info a:hover {
 	transform: scale(1.1);
+	color: #6565f7;
 }
 
+.contacts {
+	margin-top: 30px;
+}
+
+.contact {
+	display: flex;
+	justify-content: center;
+	color: white;
+	font-size: 25px;
+	margin-top: 15px;
+
+}
+
+.contact a {
+	text-decoration: none;
+	color: white;
+	transition: 0.2s ease;
+}
+
+.contact a:hover {
+	color: #6565f7;
+}
+
+.contact i {
+	font-size: 30px;
+	margin-right: 30px
+}
