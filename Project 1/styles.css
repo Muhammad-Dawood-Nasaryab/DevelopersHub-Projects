@@ -21,7 +21,7 @@ header nav {
 
 header nav h1 {
 	color: #4343e4;
-  font-size: 40px;
+    font-size: 40px;
 	font-weight: 2000;
 	margin: 10px;
 	letter-spacing: 4px;
@@ -33,7 +33,7 @@ header nav ul {
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 header nav ul li {
@@ -118,6 +118,9 @@ section .container {
 	justify-content: space-between;
 }
 
+.container .description {
+	font-weight: 200;
+}
 
 .intro .heading {
   letter-spacing: 2px;
@@ -125,9 +128,32 @@ section .container {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
+
 .intro .intro-title {
 	font-size: 50px;
 	line-height: 50px;
+}
+
+.skills-button,
+.education-button {
+	font-size: 20px;
+	color: white;
+	padding: 7px 12px;
+	margin: 15px;
+	border: none;
+	border-radius: 5px;
+	background-color: #333333;
+	transition: 0.2s;
+}
+
+.skills-button:hover,
+.education-button:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.active {
+	background-color: #4343e4;
 }
 
 .profile-pic {
@@ -196,30 +222,54 @@ section .container {
 	display: flex;
 	justify-content: center;
 	color: white;
-	font-weight: 300;
+	font-weight: 200;
 	margin: 0 0 0 20px;
 }
 
-.row {
+.skill-container {
 	display: flex;
 	justify-content: center;
-	gap: 30px;
+	align-items: center;
+	gap: 100px;
+}
+
+.skills-list ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+.skills-list h2 {
+	position: relative;
+	color: white;
+	font-weight: 500;
+	line-height: 20px;
+	transition: 0.2s ease;
+}
+
+.skills-list h2:hover {
+	cursor: pointer;
+	letter-spacing: 3px;
+}
+
+.active-skill {
+	letter-spacing: 3px;
 }
 
 .skill {
-	width: 350px;
+	display: block;
 	color: white;
+	width: 300px;
 	text-align: center;
 }
 
 .skill h2 {
-	display: flex;
-	justify-content: center;
 	font-weight: 500;
 }
 
 .skill p {
-	font-weight: 300;
+	font-weight: 200;
 }
 
 .projects {
@@ -295,4 +345,77 @@ section .container {
 .contact i {
 	font-size: 30px;
 	margin-right: 30px
+}
+
+.contact-title {
+	display: flex;
+	justify-content: center;
+	color: white;
+	font-size: 30px;
+	letter-spacing: 3px;
+}
+
+.form-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact-form {
+	font-size: 20px;
+	color: white;
+	padding: 40px 50px;
+	background-color: #0a0a0a;
+	border-radius: 15px;
+}
+
+.contact-form textarea,
+.contact-form input[type=text] {
+	font-size: 15px;
+	color: white;
+	width: 500px;
+	height: 2em;
+	margin: 10px 0;
+	padding: 5px 10px;
+	border: none;
+	border-bottom: 2px solid #4343e4;
+	border-radius: 5px;
+	background-color: #0a0a0a;
+	transition: 0.3s ease;
+	outline: none;
+}
+
+.contact-form textarea {
+	height: 120px;
+}
+
+.contact-form textarea:focus,
+.contact-form input[type=text]:focus {
+	background-color: #131313;
+}
+
+.form-buttons {
+	display: flex;
+	justify-content: right;
+	gap: 15px;
+}
+
+input[type=reset], input[type=submit] {
+	font-size: 20px;
+	color: white;
+	background-color: #333333;
+	width: 90px;
+	height: 50px;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	transition: 0.3s ease;
+}
+
+input[type=reset]:hover, input[type=submit]:hover {
+	background-color: #4343e4;
+}
+
+input[type=reset]:active, input[type=submit]:active {
+	background-color: #3030ad;
 }
