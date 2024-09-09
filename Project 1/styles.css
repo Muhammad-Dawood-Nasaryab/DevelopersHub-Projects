@@ -17,6 +17,7 @@ header {
 header nav {
 	display: flex;
 	justify-content: space-evenly;
+	align-items: center;
 }
 
 header nav h1 {
@@ -27,26 +28,43 @@ header nav h1 {
 	letter-spacing: 4px;
 }
 
-header nav ul {
+.hamburger {
+	display: none;
+	flex-direction: column;
+	top: 10px;
+	cursor: pointer;
+}
+
+.hamburger div {
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	margin: 3px 0;
+	border-radius: 2px;
+	transition: 0.1s ease;
+}
+
+.nav-menu {
 	width: 40%;
 	display: flex;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	list-style-type: none;
 	justify-content: space-around;
 }
 
-header nav ul li {
+.nav-menu li {
 	text-align: right;
+	padding: 8px;
 }
 
-header nav ul li:nth-child(1) a{
+.nav-menu li:nth-child(1) a {
 	background-color: #4343e4;
 }
 
-header nav ul li a {
+.nav-menu li a {
 	position: relative;
-	display: inline-block;
+	display: block;
 	text-decoration: none;
 	color: white;
 	margin-top: 20px;
@@ -56,7 +74,7 @@ header nav ul li a {
 	overflow: hidden;
 }
 
-header nav ul li a:before {
+.nav-menu li a:before {
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -68,7 +86,7 @@ header nav ul li a:before {
 	z-index: -1;
 }
 
-header nav ul li a:hover::before {
+.nav-menu li a:hover::before {
 	width: 100%;
 }
 
@@ -191,6 +209,7 @@ section .container {
 .sect-title h1 {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	position: relative;
 	color: white;
 	font-size: 45px;
@@ -233,6 +252,10 @@ section .container {
 	gap: 100px;
 }
 
+.skills-list {
+	width: 300px;
+}
+
 .skills-list ul {
 	padding: 0;
 	margin: 0;
@@ -255,6 +278,7 @@ section .container {
 
 .active-skill {
 	letter-spacing: 3px;
+	position: absolute;
 }
 
 .skill {
@@ -418,4 +442,80 @@ input[type=reset]:hover, input[type=submit]:hover {
 
 input[type=reset]:active, input[type=submit]:active {
 	background-color: #3030ad;
+}
+
+.end {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+}
+
+@media only screen and (max-width: 900px) {
+	.container {
+		justify-content: center;
+		align-items: center;
+		flex-direction: column-reverse;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	header nav {
+		justify-content: space-around;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	.hamburger:hover div {
+		background-color: #6565f7;
+	}
+
+	.nav-menu {
+		display: none;
+		position: absolute;
+		background-color: rgba(7, 7, 7, 0.3);
+		backdrop-filter: blur(5px);
+		border-radius: 15px;
+		flex-direction: column;
+		align-items: center;
+		height: 300px;
+		top: 90px;
+		left: 250px;
+		width: 350px;
+		z-index: 1;
+	}
+
+	.nav-menu.show {
+		display: flex;
+	}
+
+	.skill-container {
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	.projects {
+		flex-wrap: wrap;
+	}
+
+	.contact-form {
+		width: 100%;
+		margin: 10px;
+	}
+
+	.contact-form input[type=text], .contact-form textarea {
+		width: 100%;
+	}
+
+	.sect-title h1 {
+		text-align: center;
+	}
+
+	.contact {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
 }

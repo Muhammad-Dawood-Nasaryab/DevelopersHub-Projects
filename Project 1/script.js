@@ -12,6 +12,9 @@ const emailFeild = document.querySelector('.contact-form #email');
 const messageFeild = document.querySelector('.contact-form #message');
 const submitButton = document.querySelector('#submit-form');
 
+const hamburger = document.querySelector('header nav .hamburger');
+const dropdownMenu = document.querySelector('header nav .nav-menu');
+
 // This code enables to toggle between different skills
 
 function showSkill(title) {
@@ -42,6 +45,7 @@ skillButton.addEventListener('click', () => {
     skillButton.classList.add('active');
     eduContent.style.display = 'none';
     eduButton.classList.remove('active');
+    scrollTo(0, 650)
 });
 
 eduButton.addEventListener('click', () => {
@@ -49,6 +53,7 @@ eduButton.addEventListener('click', () => {
     eduButton.classList.add('active');
     skillsContent.style.display = 'none';
     skillButton.classList.remove('active');
+    scrollTo(0, 650)
 });
 
 // This code will prevent form from being submitted if fields are empty
@@ -69,4 +74,10 @@ submitButton.addEventListener('click', () => {
         emailFeild.value = "";
         messageFeild.value = "";
     };
+});
+
+// This code shows dropdown on hamburger icon when clicked
+
+hamburger.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('show');
 });
