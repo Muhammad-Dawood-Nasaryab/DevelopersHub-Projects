@@ -1,2 +1,2 @@
-### Internship projects
-Projects for internship at DevelopersHub Corporation :)
+### Internship project Week 2
+Project for internship at DevelopersHub Corporation for Week 2 :)
