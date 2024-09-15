@@ -1,6 +1,6 @@
 function highlight(str, ...values) {
     return str.reduce((bef, aft, i) => {
-        return (`${bef} <b>${values[i - 1]}</b> ${aft}`)
+        return (`${bef}<b>${values[i - 1]}</b>${aft}`);
     })
 }
 
