@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+  font-family: poppins;
+}
+
+body {
+	background-color: #a08edf;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 65vh;
+	flex-direction: column;
+}
+
+.header {
+	color: white;
+  text-align: center;
+  margin-bottom: 30px;
+	font-size: 35px;
+}
+
+.question-card {
+	width: 550px;
+	background-color: #e8e8e8;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px #6b6094;
+}
+
+.question {
+	font-size: 20px;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.options {
+	font-size: 15px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.option {
+	width: 275px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.submit {
+	background-color: #6b6094;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.submit:hover {
+	background-color: #50436f;
+}
