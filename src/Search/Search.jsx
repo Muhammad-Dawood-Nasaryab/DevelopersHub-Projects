@@ -20,14 +20,8 @@ const Search = ({ onSearch }) => {
 
     return (
         <div className={styles.search}>
-            <input 
-                type="text"
-                value={city}
-                placeholder="Enter city name"
-                onChange={changeInputField}
-                onKeyUp={changeInputField}
-            />
-            <button onClick={hanldeSearch}>Search</button>
+            <input type="text" onChange={UpdateInputField} onKeyUp={UpdateInputField} />
+            <button onClick={handleSearch}>Search</button>
         </div>
     );
 };
