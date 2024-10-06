@@ -5,8 +5,16 @@
 }
 
 body {
-    background-color: #ebebeb;
     height: 100vh;
+}
+
+body.light {
+    background-color: #ebebeb;
+}
+
+body.dark {
+    background-color: #2a2a2a;
+    color: #fff;
 }
 
 .container {

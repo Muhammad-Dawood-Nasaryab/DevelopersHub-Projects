@@ -1,4 +1,5 @@
-.weatherCard {
+.weatherCardLight,
+.weatherCardDark {
     background-color: #fff;
     text-align: center;
     padding: 15px;
@@ -7,6 +8,18 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.weatherCardLight {
+    background-color: #dfdfdf;
+}
+
+.weatherCardDark {
+    background-color: #383838;
+}
+
+.weatherCard p {
+    margin-bottom: 7px;
+    margin-top: 0px;
+}
 
 .weatherTitle {
     font-size: 24px;

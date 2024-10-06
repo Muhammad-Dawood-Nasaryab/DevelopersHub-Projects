@@ -1,0 +1,47 @@
+.headerLight,
+.headerDark {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerLight {
+    background-color: #dfdfdf;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.headerDark {
+    background-color: #3f3f3f;
+    box-shadow: 0 2px 5px #000000;
+}
+
+.headerLight h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #444;
+}
+
+.headerDark h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #c8c8c8;
+}
+
+.headerDark button,
+.headerLight button {
+    border: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.headerLight button {
+    background-color: #fff;
+    color: #444;
+}
+
+
+.headerDark button {
+    background-color: #2c2c2c;
+    color: #c8c8c8;
+}
