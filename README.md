@@ -61,7 +61,7 @@ Manages the alert through custom styling
 2. **Editing Tasks:** Users can edit existing tasks by clicking on the "Edit" button, which opens a pre-filled form.
 3. **Deleting Tasks:** Tasks can be deleted with a **confirmation modal**.
 4. **Persisting Data:** Tasks are saved in **local storage** to maintain state across sessions.
-5. ***Theme Toggle:*** The app supports **dark mode**, with the theme managed using the **React Context API**.
+5. **Theme Toggle:** The app supports **dark mode**, with the theme managed using the **React Context API**.
 
 ## Responsive Design
 The app is fully responsive with CSS Modules, ensuring a smooth experience on:
@@ -70,3 +70,26 @@ The app is fully responsive with CSS Modules, ensuring a smooth experience on:
 - Tablets
 - Mobile Devices
 
+## Performance Monitoring Techniques
+This project utilizes the following performance monitoring tools and techniques to ensure optimal performance:
+
+1. React Profiler
+   - Used to measure the performance of React components by tracking **render times** and identifying **re-renders**.
+   - The <code>Profiler</code> component is wrapped around key components to log metrics such as **mount/update durations** and **interactions**.
+
+2. React.memo
+    - Used to prevent unnecessary re-renders by memoizing components like <code>TaskList</code> and <code>TaskCard</code>.
+    - Ensures that components only re-render when their props change, improving performance.
+  
+3. Lazy Loading with <code>React.lazy()</code> and <code>Suspense</code>
+    - Optimizes initial load time by dynamically loading components only when needed, using code-splitting techniques.
+  
+4. useCallback and useMemo Hooks
+    - <code>useCallback</code>: Memoizes callback functions to avoid unnecessary re-creations during re-renders.
+    - <code>useMemo</code>: Memoizes computed values to optimize complex calculations.
+
+5. Analyzing Performance with DevTools
+    - React DevTools Profiler is used to **identify bottlenecks** and **analyze component render behavior**.
+    - Tracks components that render frequently or take longer than expected, helping to optimize state updates.
+
+These techniques ensure that the **To-Do Manager** app remains performant, even as the task list grows, by avoiding unnecessary re-renders and leveraging code-splitting for faster load times.
