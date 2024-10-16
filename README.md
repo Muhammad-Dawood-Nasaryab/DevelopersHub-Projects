@@ -26,21 +26,26 @@ A responsive **task management app** built with React, leveraging custom hooks, 
 
 1. Clone the repository:  
 ```bash
-git clone https://github.com/your-username/todo-manager.git
-cd todo-manager
+git clone https://github.com/Muhammad-Dawood-Nasaryab/DevelopersHub-Projects.git
+cd DevelopersHub-Projects
 ```
 
-2. Install dependencies:  
+2. Change the branch:
+```bash
+git checkout Week-5
+```
+
+4. Install dependencies:  
 ```bash
 npm install
 ```
 
-3. Run the application:  
+4. Run the application:  
 ```bash
 npm run dev
 ```
 
-4. Open in Browser:  
+5. Open in Browser:  
 Navigate to http://localhost:5173.
 
 ## Custom Hooks
