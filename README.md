@@ -40,12 +40,12 @@ git checkout Week-5
 npm install
 ```
 
-4. Run the application:  
+5. Run the application:  
 ```bash
 npm run dev
 ```
 
-5. Open in Browser:  
+6. Open in Browser:  
 Navigate to http://localhost:5173.
 
 ## Custom Hooks
