@@ -11,21 +11,21 @@
 }
 
 .taskList {
-    flex: 55%;
+	flex: 55%;
 }
 
 @media screen and (max-width: 768px) {
 	.container {
 		flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+		justify-content: center;
+		align-items: flex-start;
 	}
 
 	.addOrEdit {
-        width: 100%;
-    }
-	
+		width: 100%;
+	}
+
 	.taskList {
-        width: 100%;
-    }
+		width: 100%;
+	}
 }

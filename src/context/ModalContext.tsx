@@ -2,10 +2,10 @@ import React, { ReactNode, createContext, useState } from "react";
 
 interface ModalContextType {
   isModalOpen: boolean;
-	openModal: () => void;
-	closeModal: () => void;
-	setModalContent: (content: ReactNode) => void;
-	modalContent: ReactNode;
+	openModal?: () => void;
+	closeModal?: () => void;
+	setModalContent?: (content: ReactNode) => void;
+	modalContent?: ReactNode;
 };
 
 export const ModalContext = createContext<ModalContextType | undefined>(undefined);

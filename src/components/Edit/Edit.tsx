@@ -49,12 +49,17 @@ const Edit: React.FC<EditProps> = ({ title, desc, onSave }) => {
   };
 
   return (
-    <div className={ styles.container }>
-      <form className={ isDarkMode ? styles.darkform : styles.lightform } onSubmit={ handleSubmit(handleSave) }>
+    <aside className={ styles.container }>
+      <form 
+        className={ isDarkMode ? styles.darkform : styles.lightform } 
+        onSubmit={ handleSubmit(handleSave) }
+        data-testid="edit-form"
+      >
         <h2>Edit Task</h2>
         <label htmlFor="title">Title:</label>
         <input
           type="text"
+          id="title"
           { ...register("title", { required: "Title is required", maxLength: {
             value: 50,
             message: "Title is required and cannot exceed 50 characters."
@@ -66,6 +71,7 @@ const Edit: React.FC<EditProps> = ({ title, desc, onSave }) => {
         <label htmlFor="desc">Description:</label>
         <textarea
           rows={ 5 }
+          id="desc"
           { ...register("desc", { required: true }) }
           className={ styles.descField }
           placeholder="Description"
@@ -84,7 +90,7 @@ const Edit: React.FC<EditProps> = ({ title, desc, onSave }) => {
           />
         </div>
       </form>
-    </div>
+    </aside>
   );
 };
 

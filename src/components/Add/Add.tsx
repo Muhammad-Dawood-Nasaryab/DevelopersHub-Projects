@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
-import styles from "./Add.module.css";
 import { useTheme } from "../../hooks/useTheme";
+import styles from "./Add.module.css";
 
 interface Tasks {
   id: number;
@@ -37,7 +37,7 @@ const Add:React.FC<AddProps> = ({ onSubmit }) => {
   };
 
   return (
-    <div className={ styles.container }>
+    <aside className={ styles.container }>
       <form
         className={ isDarkMode ? styles.darkform : styles.lightform }
         onSubmit={ handleSubmit(onSubmitHandler) }
@@ -47,6 +47,7 @@ const Add:React.FC<AddProps> = ({ onSubmit }) => {
         <label htmlFor="title">Title:</label>
         <input
           type="text"
+          id="title"
           { ...register("title", {
             required: "Title is required",
             maxLength: { value: 50, message: "Cannot exceed 50 characters" },
@@ -58,6 +59,7 @@ const Add:React.FC<AddProps> = ({ onSubmit }) => {
 
         <label htmlFor="desc">Description:</label>
         <textarea
+          id="desc"
           rows={ 5 }
           { ...register("desc", { required: "Description is required" }) }
           className={ styles.descField }
@@ -71,8 +73,7 @@ const Add:React.FC<AddProps> = ({ onSubmit }) => {
           />
         </div>
       </form>
-    </div>
-
+    </aside>
   );
 };
 

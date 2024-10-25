@@ -80,21 +80,25 @@ This project utilizes the following performance monitoring tools and techniques 
 
 1. React Profiler
    - Used to measure the performance of React components by tracking **render times** and identifying **re-renders**.
-   - The <code>Profiler</code> component is wrapped around key components to log metrics such as **mount/update durations** and **interactions**.
+   - The `Profiler` component is wrapped around key components to log metrics such as **mount/update durations** and **interactions**.
 
 2. React.memo
-    - Used to prevent unnecessary re-renders by memoizing components like <code>TaskList</code> and <code>TaskCard</code>.
+    - Used to prevent unnecessary re-renders by memoizing components like `TaskList` and `TaskCard`.
     - Ensures that components only re-render when their props change, improving performance.
   
-3. Lazy Loading with <code>React.lazy()</code> and <code>Suspense</code>
+3. Lazy Loading with `React.lazy()` and `Suspense`
     - Optimizes initial load time by dynamically loading components only when needed, using code-splitting techniques.
   
 4. useCallback and useMemo Hooks
-    - <code>useCallback</code>: Memoizes callback functions to avoid unnecessary re-creations during re-renders.
-    - <code>useMemo</code>: Memoizes computed values to optimize complex calculations.
+    - `useCallback`: Memoizes callback functions to avoid unnecessary re-creations during re-renders.
+    - `useMemo`: Memoizes computed values to optimize complex calculations.
 
 5. Analyzing Performance with DevTools
     - React DevTools Profiler is used to **identify bottlenecks** and **analyze component render behavior**.
     - Tracks components that render frequently or take longer than expected, helping to optimize state updates.
 
 These techniques ensure that the **To-Do Manager** app remains performant, even as the task list grows, by avoiding unnecessary re-renders and leveraging code-splitting for faster load times.
+
+## Testing
+
+This app uses [Vitest](https://vitest.dev/), jest and [React Resting Library](https://testing-library.com/) to write app, ensuring that it works as expected

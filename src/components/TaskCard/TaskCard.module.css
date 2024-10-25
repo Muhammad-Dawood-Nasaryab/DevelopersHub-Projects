@@ -17,11 +17,6 @@
     box-shadow: 0 0 5px #00000054;
     transition: .2s ease;
 }
-.darkcard:hover,
-.lightcard:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 10px #00000084;
-}
 
 .lightcard h3 {
     font-size: 20px;
