@@ -20,7 +20,7 @@ interface TasksProps {
   testTasks?: Array<TasksListType>;
 }
 
-const Tasks: React.FC<TasksProps> = ({ testTasks }) => {
+const Tasks: React.FC<TasksProps> = ({ testTasks }) => {  // props for test data
   const { tasks, addTask, deleteTask, editTask, saveTask } = useTasks();
   const { openModal, closeModal, setModalContent } = useModal();
   const isModalOpen = useContext(ModalContext);
